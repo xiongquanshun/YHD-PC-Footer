@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>益活动</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+	<style>
+		/* modal */
+		.share-modal{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%) !important;
+			width: 420px;
+		}
+		.share-modal-header{
+			position: relative;
+			padding: 15px;
+			border-top-left-radius: .3rem;
+			border-top-right-radius: .3rem;
+			font-size:14px;
+		}
+		.share-modal-header>div{
+			padding: 10px 20px 0;
+		}
+		.share-modal-close{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+		.share-modal-body{padding:0 35px 20px }
+		.share-btn{
+			border:none !important;
+			background: rgb(94, 185, 94);
+			color: #fff;
+			width: 100%;
+			padding: 10px;
+			margin-top: 20px;
+		}
+		.share-btn:focus{border:none;box-shadow:none}
+		.share-btn:hover{
+			background: rgb(171, 235, 171);
+			color: #fff;
+		}
+		.share-btn:active{
+			background: rgb(171, 235, 171);
+			color: #fff;
+			border:none !important;
+			
+		}
+		/* header */
+		#homes{
+			background: url('images/img/joinUs.jpg') no-repeat center center;
+			background-size: 100% 100%;
+		}
+		#homes canvas{background: inherit;}
+		.hero_slider_container{position: absolute}
+		.homes-text {
+			position: absolute;
+			left: 70%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.homes-text button{
+			border:1px solid #fff; 
+			border-radius: 10px;
+			background: transparent;
+			color: #fff;
+			margin-top: 30px;
+			padding: 2px 20px;
+			font-size: 1.2vw;
+			width: 128px;
+		}
+		.homes-text button:focus{
+			outline: 0
+		}
+		.homes-text div{
+		
+			font-size: 1.6vw;
+			line-height: 1.6;
+			color: #fff;
+		}
+		.homes-text div:nth-child(odd){
+			font-size: 2vw;
+			line-height: inherit;
+			font-weight: 600;
+		}
+		.index-content {
+			background: rgb(243, 244, 245);
+		}
+		.index-ul {
+			background: #fff;
+			font-size: 14px;
+			box-sizing: border-box;
+			margin: 60px 140px;
+			width: 100%;
+			padding-bottom: 50px;
+		}
+		.index-li {
+			padding: 30px 50px 0;
+			display: flex;
+			align-items: center;
+		}
+
+		.index-li .index-content-title {
+			font-size: 16px;
+		}
+		.index-content-title.index-content-tips{text-align: center;font-weight: 400;margin-bottom: 20px;}
+		.index-li .index-content-text{
+			margin-top: 10px;
+			font-size: 14px;
+		}
+		.index-li>img{display: block;margin: 20px 50px 10px 0px}
+
+	</style>
+</head>
+
+<body>
+	<!-- nav -->
+	<nav class="navbar navbar-expand-xl  fixed-top">
+		<!-- Logo -->
+		<div class="logo mr-auto">
+			<img src="images/img/eavall.png" alt="" style="width: 110px;" />
+		</div>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<img src="images/img/navbar-logo.png" alt="" style="width: 50px;" />
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse " id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">公司简介</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="function.html">功能介绍</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="fee.html">费用标准</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="butler.html">益活动管家</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="share.html">共享屛</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">加入我们</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="agreement.html">用户协议</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="privacy.html">隐私保护</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="disclaimer.html">免责声明</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="Cooperation.html">商务合作</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="super_container">
+		<!-- Home -->
+		<div class="home" id="homes">
+			<div class="homes-text">
+				<div>加入益网&nbsp;&nbsp;创造你的可能</div>
+				<div>
+					2018益网互联招聘岗位
+				</div>
+				<button data-toggle="modal" data-target="#myModal">投递简历</button>
+			</div>
+
+		</div>
+
+
+		<div class="index-content row">
+			<ul class="index-ul .col-md-8 .col-lg-6">
+				<li class="index-li">
+					<div class="index-content-title" style="font-size:20px;width: 100%;
+					border-bottom: 1px solid rgb(208,209,210);padding-bottom: 15px;">
+						招聘岗位
+					</div>
+				</li>
+				<li class="index-li">
+					<div>
+						<div class="index-content-title">
+							文案策划
+						</div>
+
+						<div class="index-content-text">
+							岗位职责：
+							<br>
+							1、根据项目要求，进行项目品牌策划以及品牌传播方案的创意撰写；
+							<br>
+							2、负责品牌项目的策划与实施，根据项目方案进行沟通与具体工作推进；
+							<br>
+							3、负责市场文案的撰写，起草公司各类文案；
+							<br>
+							4、组织实施有关的品牌宣传和产品宣传；
+						</div>
+
+						<div class="index-content-text">
+							任职资格：
+							<br>
+							1、中文、广告传播、市场营销、策划、新闻、公关等相关专业大专以上学历。
+							<br>
+							2、良好的策划及实施能力，思维灵活、逻辑清晰。
+							<br>
+							3、具有独立思考和分析能力，对问题有独到的见解，有深厚的文字功底和文案撰写能力。
+							<br>
+							4、熟悉品牌建设项目沟通，品牌分析、定位、品牌核心价值体系建设、品牌形象塑造、品牌诉求、品牌推广等策略性工作与流程；
+							<br>
+							5、从事品牌策划2年以上工作经验
+							<br>
+							6、有全案策划、品牌整合推广及策略执行能力，有较为成熟的案例作品。
+							<br>
+							7、熟练掌握应用如word、Excel、PPT等图文办公软件。
+						</div>
+					</div>
+				</li>
+
+				<li class="index-li">
+					<div>
+						<div class="index-content-title">
+							活动策划
+						</div>
+						<div class="index-content-text">
+							岗位职责：
+							<br>
+							1、根据项目实际情况制定相应的活动计划及方案；
+							<br>
+							2、负责市场活动文案的策划，创意，撰写；
+							<br>
+							3、负责各类活动的组织，执行，跟踪，总结；
+							<br>
+							4、制定各类活动的策划计划及活动策略。
+						</div>
+
+						<div class="index-content-text">
+							职位要求：
+							<br>
+							1、专科以上学历；
+							<br>
+							2、有相关工作经验者优先；
+							<br>
+							3、熟悉活动运营和各类型活动策划技巧 有较强的语言和文字表达能力；
+							<br>
+							4、有较强的观察力和应变能力，优秀的人际交往和协调能力，较强的执行力；
+							<br>
+							5、熟练的操作办公软件；
+							<br>
+							6、高度的工作热情，良好的团队合作精。
+						</div>
+					</div>
+				</li>
+
+				<li class="index-li">
+					<div>
+						<div class="index-content-title">
+							平面设计师
+						</div>
+						<div class="index-content-text">
+							岗位职责：
+							<br>
+							1、协助完成公司项目及产品平面设计、UI设计项目业务；
+							<br>
+							2、协助公司的活动业务现场的拍摄、摄像。
+						</div>
+						<div class="index-content-text">
+							任职要求：
+							<br>
+							1. 大专以上学历，广告视觉、平面设计、UI设计等相关专业。
+							<br>
+							2. 能熟练使用Photoshop/illustrator/Coreldrew/InDesign等设计软件，懂摄影，摄像者优先。
+							<br>
+							3. 热爱设计，敢于创新，主动性高，善于沟通、耐心细致，能准确表达设计思路，有较强的责任心及较强的理解分析、对设计和品牌创意事业有炽热的梦想与激情；
+							<br>
+							4. 一年以上品牌整体设计和传播工作经验，有成熟的案例和项目操作经验的优先。
+							<br>
+							5. 充分理解项目策略，能掌握客户需求，通过视觉准确的表达创意概念，完成项目方案设计执行与后续指导工作。
+							<br>
+							6. 具有出色的审美品位和素养，深厚的美术功底及创意能力，富于感染力的画面表现能力优先。
+							<br>
+							7. 组织能力强，善于沟通与协作，能高质量高效率的完成工作。
+						</div>
+					</div>
+				</li>
+
+				<li class="index-li">
+					<div>
+						<div class="index-content-title">
+							市场BD
+						</div>
+						<div class="index-content-text">
+							岗位职责：
+							<br>
+							1.协助完成市场部商务合作的前期筛选与对接；
+							<br>
+							2.协助完成日常客户拓展、沟通、合同签署等工作；
+							<br>
+							3.协助客户工作推进、维系客户关系；
+							<br>
+							4.现场市场活动协助支持，协助展会参展；
+							<br>
+							5.每周量化任务目标，以签订客户合同协议、履行合同事项为工作结果。
+						</div>
+						<div class="index-content-text">
+							任职要求：
+							<br>
+							1.广告、新闻、市场营销等专业，有相关经验者可放宽要求；
+							<br>
+							2.有知名企业、政府、媒体等各行业活动主办方资源者优先；
+							<br>
+							3.熟练使用办公软件；
+							<br>
+							4.责任心强，做事踏实细心，有较强的学习能力及执行能力；
+							<br>
+							5.性格开朗，善于沟通，有较强的理解能力和沟通能力；
+							<br>
+							6.喜欢互联网，具有敏锐的嗅觉和感知力。
+						</div>
+					</div>
+				</li>
+
+				<li class="index-li">
+					<div>
+						<div class="index-content-title">
+							WEB前端开发工程师
+						</div>
+						<div class="index-content-text">
+							岗位职责：
+							<br>
+							1、负责公司web前端开发(必须有vue框架开发经验)；
+							<br>
+							2、优化web前端用户体验及架构；
+							<br>
+							3、负责配合策划与设计师进行前端开发。
+						</div>
+						<div class="index-content-text">
+							任职要求：
+							<br>
+							1、大学专科(包含专科)及以上学历；
+							<br>
+							2、熟悉HTML、CSS、Javascript、JSON等web开发技术；
+							<br>
+							3.对HTML5、CSS3、Sass、Less方面有实际的理解和实际经验；
+							<br>
+							4.熟悉ES6规范，有跨浏览器、响应式前端开发项目经验；
+							<br>
+							5.熟悉使用各种前端调试工具，性能分析工具；
+							<br>
+							6.熟练使用vue+webpack开发项目，有vue框架，微信开发经验优先；
+							<br>
+							7、熟练使用PS、Flash等网页制作工具进行前端布局；
+							<br>
+							8、有较强的学习能力，拥有优秀的逻辑思维能力与自我管理能力；
+							<br>
+							9、具有强烈的工作责任心、有良好的沟通能力和团队合作精神；
+						</div>
+					</div>
+				</li>
+
+				<li class="index-li">
+					<div>
+						<div class="index-content-title">
+							PHP工程师
+						</div>
+						<div class="index-content-text">
+							岗位职责：
+							<br>
+							1、负责完成部门负责人交代的开发任务。
+							<br>
+							2、熟练使用数据库设计工具，完成部分数据库设计。
+							<br>
+							3、良好的沟通，遇到疑问需要及时找相关人员沟通。
+						</div>
+						<div class="index-content-text">
+							任职要求：
+							<br>
+							1、1年左右以上相关工作经验，有过微信开发经验优先。
+							<br>
+							2、熟悉PHP+Mysql、Ajax等相关开发。
+							<br>
+							3、熟悉Javascript,Jquery,HTML,CSS，vue框架等WEB前端开发技术；，并能熟练使用ThinkPHP、Prototype、jQuery等开源框架。
+							<br>
+							4、熟悉Mysql、Redis等数据库组件的使用。
+							<br>
+							5、熟悉MVC模式开发。
+							<br>
+							6、熟悉WINDOWS、LINUX等操作系统。
+							<br>
+							7、熟悉Apache应用。
+							<br>
+							8、熟练掌握Linux操作系统，了解主流应用；熟练书写Shell脚本；
+							<br>
+							9、熟悉使用主流的PHP框架如：PHP CMS、ThinkPHP等。
+							<br>
+							10、重点熟悉PHP前端应用。
+							<br>
+							注、熟练运用PHP CMS、ThinkPHP基础上二次开发优先。
+						</div>
+					</div>
+				</li>
+
+				<li class="index-li">
+					<div>
+						<div class="index-content-title">
+							信息审核员
+						</div>
+						<div class="index-content-text">
+							岗位职责：
+							<br>
+							1.负责平台内活动内容的基础审核；
+							<br>
+							2.对违规内容及时做屏蔽、删除等处理；
+							<br>
+							3.协助完成其他工作任务。
+						</div>
+						<div class="index-content-text">
+							任职要求:
+							<br>
+							1.对活动文案有良好的判断能力；
+							<br>
+							2.对时事或热点话题具有敏感性；
+							<br>
+							3.具有良好的沟通、理解能力，较强的抗压能力；
+							<br>
+							4.工作积极主动有责任感。
+						</div>
+					</div>
+				</li>
+
+				<li class="index-li">
+					<div>
+						<div class="index-content-title">
+							客服专员
+						</div>
+						<div class="index-content-text">
+							岗位职责：
+							<br>
+							1.负责400、微信公众号及各渠道客户所反映的问题给与快速有效的解答；
+							<br>
+							2.负责平台内违规内容审核，包括色情、广告以及违反法律法规要求的内容；
+							<br>
+							3.处理用户举报，对谩骂、人身攻击、发布垃圾等内容进行汇总并及时反馈；
+							<br>
+							4.对用户反馈的各项评论内容进行核实；
+							<br>
+							5.营造良好平台氛围，不断总结问题，给产品改进提供建议。
+						</div>
+						<div class="index-content-text">
+							任职要求：
+							<br>
+							1.普通话标准，打字60字/分以上，1年以上相关经验，熟练使用各种办公软件，擅长文字、语言表达及图片处理；
+							<br>
+							2.善于第一时间了解客户的需求，并对客户的问题做出相应的解决办法；
+							<br>
+							3.具有良好的沟通能力，理解能力，以及承压能力；
+							<br>
+							4.工作积极主动，当日事当日毕，有责任感，对于工作有奉献精神；
+							<br>
+							5.积极参与公司举办的各项活动，服从管理，乐于学习；
+							<br>
+							6.具备良好的团队合作精神，能积极配合公司各项工作。
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<div class="footer-flex">
+				<div class="copy-text">
+					<ul class="footer-ul">
+						<li>
+							<div>关于我们</div>
+							<a href="index.html">公司简介</a>
+							<a href="function.html">功能介绍</a>
+							<a href="fee.html">费用标准 <span>(0手续费)</span></a>
+						</li>
+						<li>
+							<div style="visibility:hidden">‘’</div>
+							<a href="butler.html">益活动管家（主办方小程序）</a>
+							<a href="share.html">共享屛</a>
+							<a href="#">加入我们</a>
+						</li>
+						<li>
+							<div>关于协议</div>
+							<a href="agreement.html">用户协议</a>
+							<a href="#">隐私保护声明</a>
+							<a href="#">版权声明</a>
+						</li>
+						<li>
+							<div>客服电话</div>
+							<a href="#">0755-4080</a>
+							<a href="#">周一至周五（09：00-18：30）</a>
+							<a href="#">商务合作</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="server-erweima clearfix">
+					<ul>
+						<li><img src="images/img/qrCode-001.jpg" alt="" />
+							<p>益活动小程序</p>
+						<li><img src="images/img/qrCode-002.jpg" alt="" />
+							<p>益活动微信服务号</p>
+						</li>
+						<li><img src="images/img/qrCode-003.jpg" alt="" />
+							<p>益活动web站</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="copy-hao">ICP备案号：粤ICP备14038732号-1 增值电信业务经营许可证：粤B2-20090059 ©2015-2018益网互联公司 版权所有</div>
+		</div>
+	</div>
+
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog share-modal">
+			<div class="modal-content">
+				<div class="share-modal-header">
+					<div style='font-weight: 600;color: #000'>简历投递提示：</div>
+					<div>
+						请将您的简历用邮件发送至HR邮箱，
+					</div>
+					<div>
+						邮箱地址：
+						<span style="color:rgb(94,185,94)" id="Email">1423638100@qq.com</span>。
+					</div>
+					<button type="button" class="close share-modal-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+				</div>
+
+				<div class="modal-body share-modal-body">
+					<button id="submit" type="button" class="btn btn-default share-btn" data-dismiss="modal" aria-hidden="true">复制邮箱地址</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="styles/bootstrap4/popper.js"></script>
+	<script src="styles/bootstrap4/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			let homes = document.getElementById('homes');
+			const radios = 1230 / 384;
+			homes.style.height = document.body.clientWidth / radios + 'px';
+			$('.index-logo').click(function () {
+				const index = $(this).index() + 1;
+				//页面滚动至指定位置
+				$('html,body').animate({
+					scrollTop: $('.index-li').eq(index).offset().top
+				}, 800);
+			});
+
+			$('#submit').click(function () {
+				var val = document.getElementById('Email');
+				window.getSelection().selectAllChildren(val);
+				document.execCommand("Copy");
+			});
+
+
+		});
+	</script>
+</body>
+
+</html>

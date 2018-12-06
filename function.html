@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>益活动</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+	<style>
+		/* header */
+		#homes{
+			background: url('images/img/function.jpg') no-repeat center center;
+			background-size: 100% 100%;
+		}
+		#homes canvas{background: inherit;}
+		.hero_slider_container{position: absolute}
+		.homes-text {
+			position: absolute;
+			left: 70%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+
+		.homes-text div{
+			font-size: 1.6vw;
+			line-height: 1.3;
+			color: #fff;
+		}
+		.homes-text :first-child{
+			font-size: 2vw;
+			line-height: inherit;
+			font-weight: 600;
+		}
+		.homes-text button{
+			border:1px solid #fff; 
+			border-radius: 10px;
+			background: transparent;
+			color: #fff;
+			margin-top: 10px;
+			padding: 2px 20px;
+			font-size: 1.2vw;
+		}
+		.homes-text button:focus{
+			outline: 0
+		}
+		.index-content {
+			background: rgb(243, 244, 245);
+		}
+		.index-ul {
+			background: #fff;
+			font-size: 14px;
+			box-sizing: border-box;
+			margin: 60px 140px;
+			width: 100%;
+			padding: 35px 0 0;
+		}
+		.index-li img{width: 100%}
+		.index-li {
+			padding: 0 50px;
+			margin-bottom: 30px;
+		}
+		
+		.index-li .index-content-title {
+			font-size: 20px;
+			font-weight: 600;
+			color: rgb(94, 185, 94);
+		}
+		.index-li .index-content-text{
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- nav -->
+	<nav class="navbar navbar-expand-xl  fixed-top">
+		<!-- Logo -->
+		<div class="logo mr-auto">
+			<img src="images/img/eavall.png" alt="" style="width: 110px;" />
+		</div>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<img src="images/img/navbar-logo.png" alt="" style="width: 50px;" />
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse " id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">公司简介</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">功能介绍</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="fee.html">费用标准</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="butler.html">益活动管家</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="share.html">共享屛</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="joinUs.html">加入我们</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="agreement.html">用户协议</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="privacy.html">隐私保护</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="disclaimer.html">免责声明</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="Cooperation.html">商务合作</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="super_container">
+		<!-- Home -->
+		<div class="home" id="homes">
+			<div class="homes-text">
+				<div>活动发布、报名管理系统!</div>
+				<div>Activities release, registration management system!</div>
+				<button>立即发起活动</button>
+			</div>
+
+		</div>
+
+
+		<div class="index-content row">
+			<ul class="index-ul .col-md-8 .col-lg-6">
+				<li class="index-li">
+					<div class="index-content-title">
+						1、注册／登录账号，发布活动
+					</div>
+					<div class="index-content-text">
+						首先您需注册／登录账号①。然后，点击“发起活动”②。
+					</div>
+					<img src="images/img/function-001.png" alt="" />
+				</li>
+
+				<li class="index-li">
+					<div class="index-content-title">
+						2、自定义编辑发布
+					</div>
+					<div class="index-content-text">
+						您的活动可以自定义：类别①、活动名称②、封面③、详情④以及你可以根据活动性质选择活动是否公开⑤。
+					</div>
+					<img src="images/img/function-002.jpg" alt="" />
+				</li>
+				<li class="index-li">
+					<div class="index-content-title">
+						3、设置票种
+					</div>
+					<div class="index-content-text">
+						你可以自主设定活动是否收费。收费票可以自主建立不同票种①，早鸟票、折扣票、全价票等等。当票价为0时，可选择是否审核放票②，最多能设定4类票种③。
+					</div>
+					<img src="images/img/function-003.jpg" alt="" />
+				</li>
+				<li class="index-li">
+					<div class="index-content-title">
+						4、设置退票规则
+					</div>
+					<div class="index-content-text">
+						你可以自主设定活动收费票是否接受退票①，如接受退票需要提前几天申请退票②。
+					</div>
+					<img src="images/img/function-004.jpg" alt="" />
+				</li>
+				<li class="index-li">
+					<div class="index-content-title">
+						5、设置报名表
+					</div>
+					<div class="index-content-text">
+						你可以除用户基本信息如：手机、昵称外，自主设定的8个报名项目如性别、年龄、职务等①，提前了解报名者作为放票审核依据。
+					</div>
+					<img src="images/img/function-005.jpg" alt="" />
+				</li>
+				<li class="index-li">
+					<div class="index-content-title">
+						6、活动管理
+					</div>
+					<div class="index-content-text">
+						在个人后台，你可以看到报名信息①、票款信息②、活动的验票二维码③。
+					</div>
+					<img src="images/img/function-006.jpg" alt="" />
+				</li>
+				<li class="index-li">
+					<div class="index-content-title">
+						7、名单管理
+					</div>
+					<div class="index-content-text">
+						首先请你放心，报名者点击报名后，系统会第一时间把电子票券通过微信消息发送给报名者。 当然，报名用户名单可以一键导出excel①。
+					</div>
+					<img src="images/img/function-007.jpg" alt="" />
+				</li>
+				<li class="index-li">
+					<div class="index-content-title">
+						8、名单管理
+					</div>
+					<div class="index-content-text">
+						<div>
+							报名者凭电子票券即可进场。提供两种扫码验票方式：
+						</div>
+						<div>
+							一、扫主办方验票码验票：报名者用关联的微信、益活动小程序扫主办方的验票二维码完成验票；
+						</div>
+						<div>
+							二、主办方扫报名用户的电子屏验票：活动发布人通过益活动小程序或关联的个人微信扫报名者的电子票方式验票。
+						</div>
+					</div>
+					<div style="display: flex;justify-content: space-between;">
+						<div style="padding-right: 15px">
+								<img src="images/img/function-008-01.png" alt="" />
+						</div>
+						
+						<div style="padding-left: 15px">
+								<img src="images/img/function-008-02.png" alt="" />
+						</div>
+						
+					</div>
+
+				</li>
+				<li class="index-li">
+					<div class="index-content-title">
+						9、收入管理
+					</div>
+					<div class="index-content-text">
+						活动主办可以在“益活动微信服务号”个人中心、“益活动管家”微信小程序对收费活动的收入进行管理，进行提现等操作。提现时益活动平台是0手续费，仅扣除第三方通道手续费，详情请查看费用标准。
+						当然，报名用户名单可以一键导出excel①。
+					</div>
+					<img src="images/img/function-009.png" alt="" />
+				</li>
+				<li class="index-li">
+					<div class="index-content-title">
+						10、营销推广
+					</div>
+					<div class="index-content-text">
+						活动主办方可以使用“签到红包”、“分享有礼”、“活动抽奖”互动营销工具对发起活动进行推广，增强用户的参与积极性，分享动力等。
+						<br>
+						签到红包：主办方可对发布的活动设置签到红包，凡报名参加的用户活动现场签到后可领取一定金额的红包；
+						<br>
+						分享有礼：主办方可对发布的活动设置分享有礼奖励，用户将活动分享给好友，好友凭邀请码报名将获得一定折扣优惠、分享的用户可获得一定的现金奖励；
+						<br>
+						活动抽奖：主办方可对发布的活动设置现场抽奖环节，凡报名到场的用户可以凭主办方公布的开奖口令参与抽奖。 当然，报名用户名单可以一键导出excel①。
+					</div>
+					<img src="images/img/function-010.png" alt="" />
+				</li>
+				<li class="index-li">
+					<div class="index-content-text">
+						温馨提示：
+						<br>
+						1.验票操作、收入管理、营销推广功能均在手机端完成，用户无需安装APP只需要关注“益活动”微信服务号或“益活动管家”微信小程序进行管理操作；
+						<br>
+						2.如您在使用过程遇到疑问需要咨询或有什么建议请，请联系益活动客服 或来信service@1wgy.com，我们会尽快协助您。 当然，报名用户名单可以一键导出excel①。
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<div class="footer-flex">
+				<div class="copy-text">
+					<ul class="footer-ul">
+						<li>
+							<div>关于我们</div>
+							<a href="index.html">公司简介</a>
+							<a href="#">功能介绍</a>
+							<a href="fee.html">费用标准 <span>(0手续费)</span></a>
+						</li>
+						<li>
+							<div style="visibility:hidden">‘’</div>
+							<a href="butler.html">益活动管家（主办方小程序）</a>
+							<a href="share.html">共享屛</a>
+							<a href="joinUs.html">加入我们</a>
+						</li>
+						<li>
+							<div>关于协议</div>
+							<a href="agreement.html">用户协议</a>
+							<a href="privacy.html">隐私保护声明</a>
+							<a href="disclaimer.html">免责声明</a>
+						</li>
+						<li>
+							<div>客服电话</div>
+							<span style="display:block;color:#848383">0755-4080</span>
+							<span style="display:block;color:#848383">周一至周五（09：00-18：30</span>
+							<a href="Cooperation.html">商务合作</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="server-erweima clearfix">
+					<ul>
+						<li><img src="images/img/qrCode-001.jpg" alt="" />
+							<p>益活动小程序</p>
+						</li>
+						<li><img src="images/img/qrCode-002.jpg" alt="" />
+							<p>益活动微信服务号</p>
+						</li>
+						<li><img src="images/img/qrCode-003.jpg" alt="" />
+							<p>益活动web站</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="copy-hao">ICP备案号：粤ICP备14038732号-1 增值电信业务经营许可证：粤B2-20090059 ©2015-2018益网互联公司 版权所有</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="styles/bootstrap4/popper.js"></script>
+	<script src="styles/bootstrap4/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			let homes = document.getElementById('homes');
+			const radios = 1230 / 384;
+			homes.style.height = document.body.clientWidth / radios + 'px';
+		});
+	</script>
+</body>
+
+</html>

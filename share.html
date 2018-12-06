@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>益活动</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+	<style>
+		/* modal */
+		.share-modal{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%) !important;
+			width: 420px;
+		}
+		.share-modal-header{
+			position: relative;
+			padding: 15px;
+			border-bottom: 1px solid #e9ecef;
+			border-top-left-radius: .3rem;
+			border-top-right-radius: .3rem;
+			font-size:14px;
+		}
+		.share-modal-header>div{
+			padding: 10px 20px 0;
+		}
+		.share-modal-close{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+		.share-modal-body{
+			background-color: rgb(239,239,239);
+		}
+		.share-modal-body form{
+			padding: 20px;
+		}
+		.share-modal-body input{
+			display: block;
+			width: 100%;
+			border:1px solid rgb(141,141,141);
+			padding: 6px 10px;
+			font-family: initial;
+		}
+		.share-modal-body input:nth-child(2){
+			margin:10px 0;
+		}
+
+		.share-btn{
+			border:none !important;
+			background: rgb(94, 185, 94);
+			color: #fff;
+			width: 100%;
+			margin-top: 60px;
+			padding: 10px;
+		}
+		.share-btn:focus{border:none;box-shadow:none}
+		.share-btn:hover{
+			background: rgb(171, 235, 171);
+			color: #fff;
+		}
+		.share-btn:active{
+			background: rgb(171, 235, 171);
+			color: #fff;
+			border:none !important;
+			
+		}
+		/* header */
+		#homes{
+			background: url('images/img/share.jpg') no-repeat center center;
+			background-size: 100% 100%;
+		}
+		#homes canvas{background: inherit;}
+		.hero_slider_container{position: absolute}
+		.homes-text {
+			position: absolute;
+			left: 70%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.homes-text button{
+			border:1px solid #fff; 
+			border-radius: 10px;
+			background: transparent;
+			color: #fff;
+			margin-top: 10px;
+			padding: 2px 20px;
+			font-size: 1.2vw;
+		}
+		.homes-text button:focus{
+			outline: 0
+		}
+		.homes-text div{
+			margin: 15px 0;
+			font-size: 1.6vw;
+			line-height: 1.6;
+			color: #fff;
+		}
+		.homes-text div:nth-child(odd){
+			font-size: 2vw;
+			line-height: inherit;
+			font-weight: 600;
+		}
+		.index-content {
+			background: rgb(243, 244, 245);
+		}
+		.index-ul {
+			background: #fff;
+			font-size: 14px;
+			box-sizing: border-box;
+			margin: 60px 140px;
+			width: 100%;
+		}
+		.index-li {
+			padding: 30px 50px;
+			display: flex;
+			align-items: center;
+		}
+
+		.index-li-logo{justify-content: space-around;text-align: center}
+		.index-logo img{margin: 0  auto 10px}
+		.index-logo img{width: 80px;}
+		.index-li:nth-child(even){background: rgb(230,242,247)}
+		.index-li .index-content-title {
+			font-size: 32px;
+			font-weight: 600;
+			color: rgb(94, 185, 94);
+		}
+		.index-content-title.index-content-tips{text-align: center;font-weight: 400;margin-bottom: 20px;}
+		.index-li .index-content-text{
+			margin-top: 10px;
+			font-size: 22px;
+		}
+		.index-li>img{display: block;margin: 20px 50px 10px 0px}
+	</style>
+</head>
+
+<body>
+	<!-- nav -->
+	<nav class="navbar navbar-expand-xl  fixed-top">
+		<!-- Logo -->
+		<div class="logo mr-auto">
+			<img src="images/img/eavall.png" alt="" style="width: 110px;" />
+		</div>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<img src="images/img/navbar-logo.png" alt="" style="width: 50px;" />
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse " id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">公司简介</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="function.html">功能介绍</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="fee.html">费用标准</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="butler.html">益活动管家</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">共享屛</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="joinUs.html">加入我们</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="agreement.html">用户协议</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="privacy.html">隐私保护</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="disclaimer.html">免责声明</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="Cooperation.html">商务合作</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="super_container">
+		<!-- Home -->
+		<div class="home" id="homes">
+			<div class="homes-text">
+				<div>文化机构免费申请“共享屏”</div>
+				<div>
+					凡城市公共图书馆、大学、文体中心、文体中心、美术馆、科学馆、大剧院等公共文化服务机构可免费获得“共享屏”作为线上线下信息联网同步发布终端。
+				</div>
+				<button data-toggle="modal" data-target="#myModal">立即提交申请</button>
+			</div>
+
+		</div>
+
+
+		<div class="index-content row">
+			<ul class="index-ul .col-md-8 .col-lg-6">
+				<li class="index-li index-li-logo">
+					<div class="index-logo">
+						<img src="images/img/share-logo-01.png" alt="" />
+						<div>2/3专享屏幕</div>
+					</div>
+					<div class="index-logo">
+						<img src="images/img/share-logo-02.png" alt="" />
+						<div>专享区独立管理</div>
+					</div>
+					<div class="index-logo">
+						<img src="images/img/share-logo-03.png" alt="" />
+						<div>便捷的发布信息</div>
+					</div>
+					<div class="index-logo">
+						<img src="images/img/share-logo-04.png" alt="" />
+						<div>线上线下互通</div>
+					</div>
+					<div class="index-logo">
+						<img src="images/img/share-logo-05.png" alt="" />
+						<div>设备智能化设定</div>
+					</div>
+
+
+				</li>
+
+				<li class="index-li">
+					<div>
+						<div class="index-content-title">
+							2/3专享屏幕
+						</div>
+						<div class="index-content-text">
+							申请文化机构独享“共享屏”屏幕2/3的区域使用权，机构可以用于发布图文信息。如：海报、活动、公告通知等。
+						</div>
+					</div>
+					<img src="images/img/share-001.png" alt="" />
+				</li>
+
+				<li class="index-li">
+					<img src="images/img/share-002.png" alt="" />
+					<div>
+						<div class="index-content-title">
+							专享区独立管理
+						</div>
+						<div class="index-content-text">
+							机构授权的管理员关注“益活动”微信服务号，就可以独立管理“共享屏”专享区信息、包括发布信息以及一键同步发布机构其它人员在益活动平台发布的活动信息。
+						</div>
+					</div>
+				</li>
+
+				<li class="index-li">
+					<div>
+						<div class="index-content-title">
+							便捷的发布信息
+						</div>
+						<div class="index-content-text">
+							机构授权的管理员用手机就可完成一键“同步至终端”发布活动公告，一键“发布海报”发布图片，快捷发布通知公告。
+						</div>
+					</div>
+					<img src="images/img/share-003.png" alt="" />
+				</li>
+
+				<li class="index-li">
+					<img src="images/img/share-004.png" alt="" />
+					<div>
+						<div class="index-content-title">
+							线上线下互通
+						</div>
+						<div class="index-content-text">
+							同步发布在共享屏上的信息提供二维码入口，用户通过手机扫码可进入更详细信息的线上页面了解信息以及分享信息。
+						</div>
+					</div>
+				</li>
+
+				<li class="index-li">
+					<div>
+						<div class="index-content-title">
+							设备智能设定
+						</div>
+						<div class="index-content-text">
+							共享屏支持定时自动开关机、开机日期设定、WiFi及接网线联网、音量远程协助设定，系统远程更新等。
+						</div>
+					</div>
+					<img src="images/img/share-005.png" alt="" />
+				</li>
+
+				<li class="index-li">
+					<div class="index-content-text" style="font-size: 16px">
+						温馨提示：
+						<br>
+						1.符合条件的文化机构可以免费申请，每个机构标配两台，根据机构的规模大小数量可能会有增减；
+						<br>
+						2.凡申请通过的机构必须指定一名“共享屏”信息管理员对屏幕发布得内容进行日常运维；
+						<br>
+						3.由于共享屏的信息发布离不开网络，申请机构设放“共享屏”的空间区域必须为室内对外公共服务区域且具备联网环境。
+						<br>
+						4.如申请前需要咨询请联系“共享屏”项目经理（邮箱：492114929@qq.com）。
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<div class="footer-flex">
+				<div class="copy-text">
+					<ul class="footer-ul">
+						<li>
+							<div>关于我们</div>
+							<a href="index.html">公司简介</a>
+							<a href="function.html">功能介绍</a>
+							<a href="fee.html">费用标准 <span>(0手续费)</span></a>
+						</li>
+						<li>
+							<div style="visibility:hidden">‘’</div>
+							<a href="butler.html">益活动管家（主办方小程序）</a>
+							<a href="#">共享屛</a>
+							<a href="joinUs.html">加入我们</a>
+						</li>
+						<li>
+							<div>关于协议</div>
+							<a href="agreement.html">用户协议</a>
+							<a href="privacy.html">隐私保护声明</a>
+							<a href="disclaimer.html">免责声明</a>
+						</li>
+						<li>
+							<div>客服电话</div>
+							<span style="display:block;color:#848383">0755-4080</span>
+							<span style="display:block;color:#848383">周一至周五（09：00-18：30</span>
+							<a href="Cooperation.html">商务合作</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="server-erweima clearfix">
+					<ul>
+						<li><img src="images/img/qrCode-001.jpg" alt="" />
+							<p>益活动小程序</p>
+						</li>
+						<li><img src="images/img/qrCode-002.jpg" alt="" />
+							<p>益活动微信服务号</p>
+						</li>
+						<li><img src="images/img/qrCode-003.jpg" alt="" />
+							<p>益活动web站</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="copy-hao">ICP备案号：粤ICP备14038732号-1 增值电信业务经营许可证：粤B2-20090059 ©2015-2018益网互联公司 版权所有</div>
+		</div>
+	</div>
+
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog share-modal">
+			<div class="modal-content">
+				<div class="share-modal-header">
+					<div style='font-weight: 600;color: #000'>申请提示 ：</div>
+					<div>
+						请填写以下信息，工作人员收到您的申请后会与您联系核实，符合条件的结构将会免费获得“共享屏”。现有部分机构通过申请点击查看
+						<span style="color:rgb(94,185,94)">通过的机构名单</span>。
+					</div>
+					<button type="button" class="close share-modal-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+				</div>
+
+				<div class="modal-body share-modal-body">
+					<form>
+						<input type="text" placeholder="机构名称" name="name" />
+						<input type="text" placeholder="联系人" name="contacts" />
+						<input type="text" placeholder="职务" name="post" />
+
+						<button id="submit" type="button" class="btn btn-default share-btn" name="submit" data-dismiss="modal"
+						 aria-hidden="true">提交申请</button>
+					</form>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="styles/bootstrap4/popper.js"></script>
+	<script src="styles/bootstrap4/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			let homes = document.getElementById('homes');
+			const radios = 1230 / 384;
+			homes.style.height = document.body.clientWidth / radios + 'px';
+			$('.index-logo').click(function () {
+				const index = $(this).index() + 1;
+				//页面滚动至指定位置
+				$('html,body').animate({
+					scrollTop: $('.index-li').eq(index).offset().top
+				}, 800);
+			});
+
+			$('#submit').click(function () {
+				var d = {};
+				var t = $('form').serializeArray();
+
+				$.each(t, function () {
+					d[this.name] = this.value;
+				});
+				alert(JSON.stringify(d));
+			});
+
+		});
+	</script>
+</body>
+
+</html>
